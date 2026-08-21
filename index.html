@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أنشطة العلوم | الصف السادس</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f4f7f6; color: #333; }
+        
+        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .header-img { width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        .header-title { text-align: center; color: #1f497d; margin-bottom: 5px; font-size: 1.6em; font-weight: 900; }
+        .teacher-name { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 1.1em; font-weight: bold; }
+        
+        .lesson-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-right: 5px solid #1f497d; }
+        .lesson-card:hover { transform: translateY(-5px); }
+        
+        .lesson-title { font-size: 1.3em; color: #2c3e50; margin-bottom: 15px; font-weight: 700; border-bottom: 2px dashed #eee; padding-bottom: 10px;}
+        
+        .buttons-container { display: flex; gap: 15px; flex-wrap: wrap; }
+        
+        .btn { flex: 1; min-width: 150px; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: bold; color: white; transition: 0.3s; }
+        
+        /* ألوان الأزرار */
+        .btn-blue { background-color: #1976d2; border: 1px solid #1565c0; }
+        .btn-blue:hover { background-color: #115293; box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3); }
+        
+        .btn-green { background-color: #27ae60; border: 1px solid #1e8449; }
+        .btn-green:hover { background-color: #196f3d; box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3); }
+        
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #95a5a6; font-size: 0.9em; }
+
+        @media (max-width: 600px) {
+            .buttons-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الترويسة العلوية -->
+        <img src="https://i.postimg.cc/cL0dkNg1/trwysyh.png" alt="ترويسة العلوم" class="header-img">
+        
+        <h1 class="header-title">منصة الأنشطة التفاعلية لمادة العلوم</h1>
+        <p class="teacher-name">الصف السادس الابتدائي | إعداد الأستاذ: صبري محمد حمد</p>
+
+        <!-- الدرس الأول -->
+        <div class="lesson-card">
+            <h2 class="lesson-title">الدرس الأول: النظرية الخلوية</h2>
+            <div class="buttons-container">
+                <a href="lesson1-remedial.html" class="btn btn-blue">نشاط علاجي 61 ✏️</a>
+                <a href="lesson1-enrichment.html" class="btn btn-green">نشاط إثرائي 61 🚀</a>
+            </div>
+        </div>
+
+        <!-- الدرس الثاني -->
+        <div class="lesson-card">
+            <h2 class="lesson-title">الدرس الثاني: الخلايا والمخلوقات الحية</h2>
+            <div class="buttons-container">
+                <a href="lesson2-remedial.html" class="btn btn-blue">نشاط علاجي 62 ✏️</a>
+                <a href="lesson2-enrichment.html" class="btn btn-green">نشاط إثرائي 62 🚀</a>
+            </div>
+        </div>
+
+        <!-- يمكننا إضافة المزيد من الدروس هنا مستقبلاً -->
+
+        <div class="footer">
+            جميع الحقوق محفوظة &copy; 2026 | أ. صبري محمد حمد
+        </div>
+    </div>
+
+</body>
+</html>
