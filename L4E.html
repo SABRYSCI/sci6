@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewportMeta">
-    <title>نشاط إثرائي 64 - نقل المواد في الخلية</title>
+    <title>نشاط إثرائي 64 - النقل السلبي والخلية</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
         * { box-sizing: border-box; }
@@ -14,7 +14,7 @@
         .date-box { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px; }
         .form-group { margin-bottom: 15px; }
         label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
-        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Tajawal', sans-serif; font-size: 1em; box-sizing: border-box; }
+        input[type="text"], select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Tajawal', sans-serif; font-size: 1em; width: 100%; box-sizing: border-box; }
         .question-card { background-color: #eafaf1; border: 1px solid #a3e4d7; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
         .item-name { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; color: #145a32; }
         .radio-group label { display: block; margin-bottom: 8px; cursor: pointer; padding: 5px; }
@@ -66,7 +66,7 @@
 <body>
     <div class="container">
         <img src="https://i.postimg.cc/cL0dkNg1/trwysyh.png" alt="الترويسة" class="header-img">
-        <h2>تقرير إنجاز نشاط إلكتروني - مادة العلوم - الصف السادس الابتدائي - نقل المواد في الخلية (إثرائي 64)</h2>
+        <h2>تقرير إنجاز نشاط إلكتروني - مادة العلوم - الصف السادس الابتدائي - النقل السلبي والخلية (إثرائي 64)</h2>
         <div class="date-box" id="currentDate"></div>
 
         <form id="activityForm">
@@ -85,38 +85,38 @@
             </div>
 
             <div class="question-card">
-                <div class="item-name">1. [سؤال محاكي لـ TIMSS]: قام طالب بوضع نبات ذابل في كوب ماء، وبعد فترة لاحظ أن النبات استعاد نضارته. ما العملية التي تفسر دخول الماء إلى خلايا النبات؟</div>
+                <div class="item-name">1. [سؤال محاكي لـ TIMSS]: عند رش عطر في زاوية الغرفة، تنتشر الرائحة في كل الغرفة. أي العمليات الخلوية تشبه هذه الظاهرة تماماً؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q1" value="الانتشار" required> أ) الانتشار</label>
-                    <label><input type="radio" name="q1" value="الخاصية الأسموزية"> ب) الخاصية الأسموزية</label>
-                    <label><input type="radio" name="q1" value="النقل النشط"> ج) النقل النشط</label>
+                    <label><input type="radio" name="q1" value="الخاصية الأسموزية" required> أ) الخاصية الأسموزية</label>
+                    <label><input type="radio" name="q1" value="البناء الضوئي"> ب) البناء الضوئي</label>
+                    <label><input type="radio" name="q1" value="الانتشار"> ج) الانتشار</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">2. [التعليم الأخضر 🌱]: تعيش بعض النباتات في تربة فقيرة بالأملاح، فتستخدم الخلايا "طاقة" لامتصاص هذه الأملاح القليلة لضمان استدامة نموها. تسمى هذه العملية بـ:</div>
+                <div class="item-name">2. [التعليم الأخضر 🌱]: البلاستيدات الخضراء تميز الخلية النباتية وتصنع الغذاء. كيف يمكن الاستفادة من هذه الفكرة لحماية البيئة في المدن؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q2" value="الخاصية الأسموزية" required> أ) الخاصية الأسموزية</label>
-                    <label><input type="radio" name="q2" value="الانتشار"> ب) الانتشار</label>
-                    <label><input type="radio" name="q2" value="النقل النشط"> ج) النقل النشط</label>
+                    <label><input type="radio" name="q2" value="باستزراع أسطح المنازل بالنباتات لزيادة الأكسجين وتقليل التلوث" required> أ) باستزراع أسطح المنازل بالنباتات لزيادة الأكسجين وتقليل التلوث</label>
+                    <label><input type="radio" name="q2" value="بإزالة الحدائق لبناء مجمعات تجارية"> ب) بإزالة الحدائق لبناء مجمعات تجارية</label>
+                    <label><input type="radio" name="q2" value="بطلاء المنازل باللون الأخضر فقط"> ج) بطلاء المنازل باللون الأخضر فقط</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">3. [الذكاء الاصطناعي 🤖]: كيف يمكن لبرامج الذكاء الاصطناعي مساعدة العلماء في صناعة الأدوية الحديثة؟</div>
+                <div class="item-name">3. [الذكاء الاصطناعي 🤖]: كيف يمكن للذكاء الاصطناعي مساعدة علماء الزراعة في فهم "الخاصية الأسموزية" وتأثير الجفاف على المحاصيل؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q3" value="بمحاكاة كيف يخترق الدواء الغشاء البلازمي للخلية دون إتلافه" required> أ) بمحاكاة كيف يخترق الدواء الغشاء البلازمي للخلية دون إتلافه</label>
-                    <label><input type="radio" name="q3" value="برفض جميع الأدوية المصنعة كيميائياً"> ب) برفض جميع الأدوية المصنعة كيميائياً</label>
-                    <label><input type="radio" name="q3" value="عن طريق حقن المريض بالروبوتات الصغيرة"> ج) عن طريق حقن المريض بالروبوتات الصغيرة</label>
+                    <label><input type="radio" name="q3" value="عن طريق تحويل المحاصيل إلى نباتات بلاستيكية" required> أ) عن طريق تحويل المحاصيل إلى نباتات بلاستيكية</label>
+                    <label><input type="radio" name="q3" value="ببناء نماذج محاكاة تتنبأ بسرعة فقدان الخلايا للماء في ظروف الجفاف المختلفة"> ب) ببناء نماذج محاكاة تتنبأ بسرعة فقدان الخلايا للماء في ظروف الجفاف المختلفة</label>
+                    <label><input type="radio" name="q3" value="بمنع الخاصية الأسموزية من الحدوث تماماً"> ج) بمنع الخاصية الأسموزية من الحدوث تماماً</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">4. [تفكير ناقد]: لماذا يزيد شرب ماء البحر من شعور الإنسان بالعطش ولا يرويه؟</div>
+                <div class="item-name">4. [تفكير ناقد]: لماذا لا تحتاج الخلية الحيوانية إلى "جدار خلوي" صلب يحميها ويدعمها مثل الخلية النباتية؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q4" value="لأن ملح البحر يزود الجسم بالطاقة بشكل كبير ومفاجئ" required> أ) لأن ملح البحر يزود الجسم بالطاقة بشكل كبير ومفاجئ</label>
-                    <label><input type="radio" name="q4" value="لأن الخاصية الأسموزية ستسحب الماء من خلايا الجسم إلى الخارج بسبب ملوحة الدم المرتفعة" required> ب) لأن الخاصية الأسموزية ستسحب الماء من خلايا الجسم إلى الخارج بسبب ملوحة الدم المرتفعة</label>
-                    <label><input type="radio" name="q4" value="لأن ماء البحر بارد جداً"> ج) لأن ماء البحر بارد جداً</label>
+                    <label><input type="radio" name="q4" value="لأن الخلايا الحيوانية لا تمتص الماء أبداً" required> أ) لأن الخلايا الحيوانية لا تمتص الماء أبداً</label>
+                    <label><input type="radio" name="q4" value="لأن الحيوانات لا تتحرك مثل النباتات"> ب) لأن الحيوانات لا تتحرك مثل النباتات</label>
+                    <label><input type="radio" name="q4" value="لأن الحيوانات تمتلك هياكل تدعم أجسامها كالعظام، بينما يعتمد النبات على الجدار الخلوي"> ج) لأن الحيوانات تمتلك هياكل تدعم أجسامها كالعظام، بينما يعتمد النبات على الجدار الخلوي</label>
                 </div>
             </div>
 
@@ -141,10 +141,10 @@
         const form = document.getElementById('activityForm');
 
         const questionsBank = [
-            { id: 'q1', text: '[سؤال محاكي لـ TIMSS]: قام طالب بوضع نبات ذابل في كوب ماء، وبعد فترة لاحظ أن النبات استعاد نضارته. ما العملية التي تفسر دخول الماء إلى خلايا النبات؟', correct: 'الخاصية الأسموزية' },
-            { id: 'q2', text: '[التعليم الأخضر 🌱]: تعيش بعض النباتات في تربة فقيرة بالأملاح، فتستخدم الخلايا "طاقة" لامتصاص هذه الأملاح القليلة لضمان استدامة نموها. تسمى هذه العملية بـ:', correct: 'النقل النشط' },
-            { id: 'q3', text: '[الذكاء الاصطناعي 🤖]: كيف يمكن لبرامج الذكاء الاصطناعي مساعدة العلماء في صناعة الأدوية الحديثة؟', correct: 'بمحاكاة كيف يخترق الدواء الغشاء البلازمي للخلية دون إتلافه' },
-            { id: 'q4', text: '[تفكير ناقد]: لماذا يزيد شرب ماء البحر من شعور الإنسان بالعطش ولا يرويه؟', correct: 'لأن الخاصية الأسموزية ستسحب الماء من خلايا الجسم إلى الخارج بسبب ملوحة الدم المرتفعة' }
+            { id: 'q1', text: '[سؤال محاكي لـ TIMSS]: عند رش عطر في زاوية الغرفة، تنتشر الرائحة في كل الغرفة. أي العمليات الخلوية تشبه هذه الظاهرة تماماً؟', correct: 'الانتشار' },
+            { id: 'q2', text: '[التعليم الأخضر 🌱]: البلاستيدات الخضراء تميز الخلية النباتية وتصنع الغذاء. كيف يمكن الاستفادة من هذه الفكرة لحماية البيئة في المدن؟', correct: 'باستزراع أسطح المنازل بالنباتات لزيادة الأكسجين وتقليل التلوث' },
+            { id: 'q3', text: '[الذكاء الاصطناعي 🤖]: كيف يمكن للذكاء الاصطناعي مساعدة علماء الزراعة في فهم "الخاصية الأسموزية" وتأثير الجفاف على المحاصيل؟', correct: 'ببناء نماذج محاكاة تتنبأ بسرعة فقدان الخلايا للماء في ظروف الجفاف المختلفة' },
+            { id: 'q4', text: '[تفكير ناقد]: لماذا لا تحتاج الخلية الحيوانية إلى "جدار خلوي" صلب يحميها ويدعمها مثل الخلية النباتية؟', correct: 'لأن الحيوانات تمتلك هياكل تدعم أجسامها كالعظام، بينما يعتمد النبات على الجدار الخلوي' }
         ];
 
         function toArabicDigits(value) {
