@@ -85,43 +85,43 @@
             </div>
 
             <div class="question-card">
-                <div class="item-name">1. تعيش بعض المخلوقات الحية في مستعمرات مائية مثل مستعمرة:</div>
+                <div class="item-name">1. مجموعة من الخلايا المتشابهة التي تقوم معاً بالوظيفة نفسها تُسمى:</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q1" value="البكتيريا" required> أ) البكتيريا</label>
-                    <label><input type="radio" name="q1" value="طحلب الفولفوكس"> ب) طحلب الفولفوكس</label>
-                    <label><input type="radio" name="q1" value="اليوجلينا"> ج) اليوجلينا</label>
+                    <label><input type="radio" name="q1" value="النسيج" required> أ) النسيج</label>
+                    <label><input type="radio" name="q1" value="الجهاز"> ب) الجهاز</label>
+                    <label><input type="radio" name="q1" value="العضو"> ج) العضو</label>
                 </div>
             </div>
             <div class="question-card">
-                <div class="item-name">2. كل ما يأتي من المخلوقات وحيدة الخلية ما عدا:</div>
+                <div class="item-name">2. أي المخلوقات الحية التالية تعيش في مستعمرات مائية؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q2" value="البراميسيوم" required> أ) البراميسيوم</label>
-                    <label><input type="radio" name="q2" value="الإنسان"> ب) الإنسان</label>
+                    <label><input type="radio" name="q2" value="الإنسان" required> أ) الإنسان</label>
+                    <label><input type="radio" name="q2" value="طحلب الفولفوكس"> ب) طحلب الفولفوكس</label>
                     <label><input type="radio" name="q2" value="البكتيريا"> ج) البكتيريا</label>
                 </div>
             </div>
             <div class="question-card">
-                <div class="item-name">3. وظيفة النسيج الضام في جسم المخلوق الحي هي:</div>
+                <div class="item-name">3. نسيج موجود في العظام والغضاريف والأوتار ووظيفته ربط الأعضاء:</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q3" value="ربط الأعضاء" required> أ) ربط الأعضاء</label>
-                    <label><input type="radio" name="q3" value="تنظيم وظائف الجسم"> ب) تنظيم وظائف الجسم</label>
-                    <label><input type="radio" name="q3" value="نقل الرسائل العصبية"> ج) نقل الرسائل العصبية</label>
+                    <label><input type="radio" name="q3" value="النسيج الطلائي" required> أ) النسيج الطلائي</label>
+                    <label><input type="radio" name="q3" value="النسيج العصبي"> ب) النسيج العصبي</label>
+                    <label><input type="radio" name="q3" value="النسيج الضام"> ج) النسيج الضام</label>
                 </div>
             </div>
             <div class="question-card">
-                <div class="item-name">4. نسيج وظيفته تنظيم وظائف الجسم عن طريق نقل الرسائل:</div>
+                <div class="item-name">4. يتكون من نسيجين مختلفين أو أكثر تعمل معاً للقيام بوظيفة محددة (مثل القلب أو الدماغ):</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q4" value="النسيج العضلي" required> أ) النسيج العضلي</label>
-                    <label><input type="radio" name="q4" value="النسيج الطلائي"> ب) النسيج الطلائي</label>
-                    <label><input type="radio" name="q4" value="النسيج العصبي"> ج) النسيج العصبي</label>
+                    <label><input type="radio" name="q4" value="الجهاز" required> أ) الجهاز</label>
+                    <label><input type="radio" name="q4" value="العضو"> ب) العضو</label>
+                    <label><input type="radio" name="q4" value="الخلية"> ج) الخلية</label>
                 </div>
             </div>
             <div class="question-card">
-                <div class="item-name">5. يعتبر الدماغ والقلب والجلد أمثلة على:</div>
+                <div class="item-name">5. نسيج يغطي أجزاء من الجسم مثل الجلد ويبطن الأعضاء الداخلية كالجهاز الهضمي:</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q5" value="الخلايا" required> أ) الخلايا</label>
-                    <label><input type="radio" name="q5" value="الأعضاء"> ب) الأعضاء</label>
-                    <label><input type="radio" name="q5" value="الأجهزة"> ج) الأجهزة</label>
+                    <label><input type="radio" name="q5" value="النسيج العضلي" required> أ) النسيج العضلي</label>
+                    <label><input type="radio" name="q5" value="النسيج الضام"> ب) النسيج الضام</label>
+                    <label><input type="radio" name="q5" value="النسيج الطلائي"> ج) النسيج الطلائي</label>
                 </div>
             </div>
 
@@ -146,11 +146,11 @@
         const form = document.getElementById('activityForm');
 
         const questionsBank = [
-            { id: 'q1', text: 'تعيش بعض المخلوقات الحية في مستعمرات مائية مثل مستعمرة:', correct: 'طحلب الفولفوكس' },
-            { id: 'q2', text: 'كل ما يأتي من المخلوقات وحيدة الخلية ما عدا:', correct: 'الإنسان' },
-            { id: 'q3', text: 'وظيفة النسيج الضام في جسم المخلوق الحي هي:', correct: 'ربط الأعضاء' },
-            { id: 'q4', text: 'نسيج وظيفته تنظيم وظائف الجسم عن طريق نقل الرسائل:', correct: 'النسيج العصبي' },
-            { id: 'q5', text: 'يعتبر الدماغ والقلب والجلد أمثلة على:', correct: 'الأعضاء' }
+            { id: 'q1', text: 'مجموعة من الخلايا المتشابهة التي تقوم معاً بالوظيفة نفسها تُسمى:', correct: 'النسيج' },
+            { id: 'q2', text: 'أي المخلوقات الحية التالية تعيش في مستعمرات مائية؟', correct: 'طحلب الفولفوكس' },
+            { id: 'q3', text: 'نسيج موجود في العظام والغضاريف والأوتار ووظيفته ربط الأعضاء:', correct: 'النسيج الضام' },
+            { id: 'q4', text: 'يتكون من نسيجين مختلفين أو أكثر تعمل معاً للقيام بوظيفة محددة (مثل القلب أو الدماغ):', correct: 'العضو' },
+            { id: 'q5', text: 'نسيج يغطي أجزاء من الجسم مثل الجلد ويبطن الأعضاء الداخلية كالجهاز الهضمي:', correct: 'النسيج الطلائي' }
         ];
 
         function toArabicDigits(value) {
