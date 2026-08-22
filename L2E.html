@@ -14,7 +14,7 @@
         .date-box { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px; }
         .form-group { margin-bottom: 15px; }
         label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
-        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Tajawal', sans-serif; font-size: 1em; box-sizing: border-box; }
+        input[type="text"], select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Tajawal', sans-serif; font-size: 1em; width: 100%; box-sizing: border-box; }
         .question-card { background-color: #eafaf1; border: 1px solid #a3e4d7; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
         .item-name { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; color: #145a32; }
         .radio-group label { display: block; margin-bottom: 8px; cursor: pointer; padding: 5px; }
@@ -85,38 +85,38 @@
             </div>
 
             <div class="question-card">
-                <div class="item-name">1. [سؤال TIMSS - من أنشطة الصف الرابع ص 20]: ما العضو البشري الذي له نفس وظيفة خياشيم السمكة؟</div>
+                <div class="item-name">1. [سؤال TIMSS]: أي مما يلي يمثل الترتيب الصحيح لمستويات التنظيم في المخلوقات الحية من الأبسط إلى الأكثر تعقيداً؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q1" value="الرئة" required> أ) الرئة</label>
-                    <label><input type="radio" name="q1" value="الدماغ"> ب) الدماغ</label>
-                    <label><input type="radio" name="q1" value="المعدة"> ج) المعدة</label>
+                    <label><input type="radio" name="q1" value="خلية ← عضو ← نسيج ← جهاز ← مخلوق حي" required> أ) خلية ← عضو ← نسيج ← جهاز ← مخلوق حي</label>
+                    <label><input type="radio" name="q1" value="نسيج ← خلية ← جهاز ← عضو ← مخلوق حي"> ب) نسيج ← خلية ← جهاز ← عضو ← مخلوق حي</label>
+                    <label><input type="radio" name="q1" value="خلية ← نسيج ← عضو ← جهاز ← مخلوق حي"> ج) خلية ← نسيج ← عضو ← جهاز ← مخلوق حي</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">2. [التعليم الأخضر 🌱]: يغطي النسيج الطلائي في النباتات أوراق الشجر ويحتوي على ثغور. كيف تساهم هذه الثغور في استدامة البيئة؟</div>
+                <div class="item-name">2. [التعليم الأخضر 🌱]: يُغطي النسيج الطلائي أوراق النباتات لحمايتها، ويحتوي على مسامات (ثغور). كيف تساهم هذه الثغور في تنقية هواء البيئة؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q2" value="تمتص غاز ثاني أكسيد الكربون الضار وتطلق الأكسجين النقي" required> أ) تمتص غاز ثاني أكسيد الكربون الضار وتطلق الأكسجين النقي</label>
-                    <label><input type="radio" name="q2" value="تزيد من حرارة الجو"> ب) تزيد من حرارة الجو</label>
-                    <label><input type="radio" name="q2" value="تمنع نمو النباتات الأخرى"> ج) تمنع نمو النباتات الأخرى</label>
+                    <label><input type="radio" name="q2" value="عن طريق امتصاص غاز ثاني أكسيد الكربون وإطلاق الأكسجين" required> أ) عن طريق امتصاص غاز ثاني أكسيد الكربون وإطلاق الأكسجين</label>
+                    <label><input type="radio" name="q2" value="عن طريق تخزين المياه الملوثة داخل الورقة"> ب) عن طريق تخزين المياه الملوثة داخل الورقة</label>
+                    <label><input type="radio" name="q2" value="عن طريق إطلاق غازات تزيد من حرارة الأرض"> ج) عن طريق إطلاق غازات تزيد من حرارة الأرض</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">3. [الذكاء الاصطناعي 🤖]: كيف يمكن لتقنيات الذكاء الاصطناعي مساعدة الأطباء في دراسة "أجهزة الجسم" المعقدة؟</div>
+                <div class="item-name">3. [الذكاء الاصطناعي 🤖]: كيف يمكن لتقنيات الذكاء الاصطناعي اليوم مساعدة الأطباء في دراسة "النسيج العصبي" الذي ينقل الرسائل في الجسم؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q3" value="بإنشاء توأمة رقمية ومحاكاة دقيقة لجسم الإنسان لاختبار الأدوية دون ضرر" required> أ) بإنشاء توأمة رقمية ومحاكاة دقيقة لجسم الإنسان لاختبار الأدوية دون ضرر</label>
-                    <label><input type="radio" name="q3" value="باستبدال الأطباء البشريين بالكامل"> ب) باستبدال الأطباء البشريين بالكامل</label>
-                    <label><input type="radio" name="q3" value="بإيقاف عمل الأجهزة الطبية"> ج) بإيقاف عمل الأجهزة الطبية</label>
+                    <label><input type="radio" name="q3" value="باستبدال النسيج العصبي بنسيج عضلي ليصبح الجسم أقوى" required> أ) باستبدال النسيج العصبي بنسيج عضلي ليصبح الجسم أقوى</label>
+                    <label><input type="radio" name="q3" value="عبر رسم خرائط دقيقة ومعقدة لشبكات الأعصاب وتحديد مواقع التلف بسرعة"> ب) عبر رسم خرائط دقيقة ومعقدة لشبكات الأعصاب وتحديد مواقع التلف بسرعة</label>
+                    <label><input type="radio" name="q3" value="بإيقاف عمل النسيج العصبي لمنع الشعور بالألم"> ج) بإيقاف عمل النسيج العصبي لمنع الشعور بالألم</label>
                 </div>
             </div>
 
             <div class="question-card">
-                <div class="item-name">4. [تفكير ناقد]: لماذا يختلف شكل النسيج العضلي عن شكل النسيج العصبي تحت المجهر؟</div>
+                <div class="item-name">4. [تفكير ناقد]: لماذا يختلف شكل "النسيج العضلي" الذي يحرك الجسم عن شكل "النسيج الطلائي" الذي يغطي الجلد؟</div>
                 <div class="radio-group">
-                    <label><input type="radio" name="q4" value="لأن كل نوع من الأنسجة يؤدي وظيفة مختلفة تناسب شكله" required> أ) لأن كل نوع من الأنسجة يؤدي وظيفة مختلفة تناسب شكله</label>
-                    <label><input type="radio" name="q4" value="لأن المجهر لا يستطيع رؤية الأنسجة بوضوح"> ب) لأن المجهر لا يستطيع رؤية الأنسجة بوضوح</label>
-                    <label><input type="radio" name="q4" value="بسبب اختلاف حجم الكائن الحي"> ج) بسبب اختلاف حجم الكائن الحي</label>
+                    <label><input type="radio" name="q4" value="لأن كل نسيج له مظهر وشكل مختلف ليناسب الوظيفة المحددة التي يؤديها" required> أ) لأن كل نسيج له مظهر وشكل مختلف ليناسب الوظيفة المحددة التي يؤديها</label>
+                    <label><input type="radio" name="q4" value="لأن المجهر يغير شكل الأنسجة عند فحصها"> ب) لأن المجهر يغير شكل الأنسجة عند فحصها</label>
+                    <label><input type="radio" name="q4" value="لأن النسيج العضلي يوجد في الحيوانات فقط والطلائي في النباتات فقط"> ج) لأن النسيج العضلي يوجد في الحيوانات فقط والطلائي في النباتات فقط</label>
                 </div>
             </div>
 
@@ -141,10 +141,10 @@
         const form = document.getElementById('activityForm');
 
         const questionsBank = [
-            { id: 'q1', text: '[سؤال TIMSS - من أنشطة الصف الرابع ص 20]: ما العضو البشري الذي له نفس وظيفة خياشيم السمكة؟', correct: 'الرئة' },
-            { id: 'q2', text: '[التعليم الأخضر 🌱]: يغطي النسيج الطلائي في النباتات أوراق الشجر ويحتوي على ثغور. كيف تساهم هذه الثغور في استدامة البيئة؟', correct: 'تمتص غاز ثاني أكسيد الكربون الضار وتطلق الأكسجين النقي' },
-            { id: 'q3', text: '[الذكاء الاصطناعي 🤖]: كيف يمكن لتقنيات الذكاء الاصطناعي مساعدة الأطباء في دراسة "أجهزة الجسم" المعقدة؟', correct: 'بإنشاء توأمة رقمية ومحاكاة دقيقة لجسم الإنسان لاختبار الأدوية دون ضرر' },
-            { id: 'q4', text: '[تفكير ناقد]: لماذا يختلف شكل النسيج العضلي عن شكل النسيج العصبي تحت المجهر؟', correct: 'لأن كل نوع من الأنسجة يؤدي وظيفة مختلفة تناسب شكله' }
+            { id: 'q1', text: '[سؤال TIMSS]: أي مما يلي يمثل الترتيب الصحيح لمستويات التنظيم في المخلوقات الحية من الأبسط إلى الأكثر تعقيداً؟', correct: 'خلية ← نسيج ← عضو ← جهاز ← مخلوق حي' },
+            { id: 'q2', text: '[التعليم الأخضر 🌱]: يُغطي النسيج الطلائي أوراق النباتات لحمايتها، ويحتوي على مسامات (ثغور). كيف تساهم هذه الثغور في تنقية هواء البيئة؟', correct: 'عن طريق امتصاص غاز ثاني أكسيد الكربون وإطلاق الأكسجين' },
+            { id: 'q3', text: '[الذكاء الاصطناعي 🤖]: كيف يمكن لتقنيات الذكاء الاصطناعي اليوم مساعدة الأطباء في دراسة "النسيج العصبي" الذي ينقل الرسائل في الجسم؟', correct: 'عبر رسم خرائط دقيقة ومعقدة لشبكات الأعصاب وتحديد مواقع التلف بسرعة' },
+            { id: 'q4', text: '[تفكير ناقد]: لماذا يختلف شكل "النسيج العضلي" الذي يحرك الجسم عن شكل "النسيج الطلائي" الذي يغطي الجلد؟', correct: 'لأن كل نسيج له مظهر وشكل مختلف ليناسب الوظيفة المحددة التي يؤديها' }
         ];
 
         function toArabicDigits(value) {
