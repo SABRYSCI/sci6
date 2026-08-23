@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewportMeta">
+    <title>نشاط علاجي 610 - الخصائص الفيزيائية للمادة</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
+        * { box-sizing: border-box; }
+        body { font-family: 'Tajawal', sans-serif; background-color: #f0f8ff; margin: 0; padding: 20px; }
+        .container { background-color: white; border-radius: 10px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+        .header-img { width: 100%; border-radius: 8px; margin-bottom: 20px; border: 1px solid #ddd; }
+        h2 { color: #154360; text-align: center; font-size: 1.15em; margin-bottom: 5px; line-height: 1.6; }
+        .date-box { text-align: center; color: #7f8c8d; font-size: 0.9em; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
+        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-family: 'Tajawal', sans-serif; font-size: 1em; box-sizing: border-box; }
+        .question-card { background-color: #e3f2fd; border: 1px solid #90caf9; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+        .item-name { font-size: 1.1em; font-weight: bold; margin-bottom: 10px; color: #0d47a1; }
+        .radio-group label { display: block; margin-bottom: 8px; cursor: pointer; padding: 5px; width: 100%; }
+        .correct-answer-note { display: none; }
+        .btn-submit { width: 100%; padding: 12px; background-color: #1976d2; border: none; border-radius: 5px; color: white; font-size: 1.1em; font-weight: bold; cursor: pointer; margin-top: 10px; font-family: 'Tajawal', sans-serif; transition: 0.3s; }
+        .btn-submit:hover { background-color: #1565c0; }
+        .btn-submit:disabled { background-color: #95a5a6; cursor: not-allowed; }
+        .btn-print { display: none; width: 100%; padding: 12px; background-color: #1f497d; border: none; border-radius: 5px; color: white; font-size: 1.05em; font-weight: bold; cursor: pointer; margin-top: 12px; font-family: 'Tajawal', sans-serif; transition: 0.3s; }
+        .btn-print:hover { background-color: #163a63; }
+        .result-box { display: none; text-align: center; margin-top: 20px; padding: 15px; border: 2px dashed #e74c3c; border-radius: 8px; background-color: #fadbd8; }
+        .grade-text { color: #c0392b; font-size: 1.8em; font-weight: bold; direction: ltr; display: inline-block; unicode-bidi: embed; }
+        .feedback { text-align: right; margin-top: 15px; font-size: 0.95em; color: #333; }
+        .feedback ul { margin: 0; padding-inline-start: 18px; }
+        .correct { color: #27ae60; font-weight: bold; }
+        .wrong { color: #c0392b; font-weight: bold; }
+        .footer-note { text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid #ecf0f1; font-size: 0.9em; color: #7f8c8d; font-weight: bold; }
+
+        @media print {
+            @page { size: A4 portrait; margin: 8mm; }
+            html, body { width: 210mm !important; min-height: 0 !important; background: #ffffff; padding: 0 !important; margin: 0 !important; overflow: visible !important; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-shadow: none !important; transition: none !important; }
+            .container { width: 194mm !important; max-width: 194mm !important; margin: 0 auto !important; padding: 10px 18px; border: 3px solid #1f497d; border-radius: 12px; page-break-inside: avoid; }
+            .header-img { max-height: 60px; width: auto; display: block; margin: 0 auto 6px; border: none; }
+            h2 { font-size: 0.95em; margin: 2px 0; line-height: 1.5; }
+            .date-box { font-size: 0.7em; margin-bottom: 6px; color: #555; }
+            .form-group { margin-bottom: 4px; }
+            label { font-size: 0.75em; margin-bottom: 2px; }
+            input[type="text"], select { padding: 2px 4px; font-size: 0.8em; border: none; border-bottom: 1px solid #999; border-radius: 0; background: transparent; -webkit-appearance: none; appearance: none; color: #000; opacity: 1 !important; -webkit-text-fill-color: #000 !important; }
+            .question-card { padding: 5px 10px; margin-bottom: 4px; border-radius: 6px; page-break-inside: avoid; break-inside: avoid; }
+            .item-name { font-size: 0.85em; margin-bottom: 3px; color: black; }
+            .radio-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+            .radio-group input[type="radio"] { display: none; }
+            .radio-group label { margin: 0; padding: 0; }
+            .radio-group label:has(input:not(:checked)) { display: none; }
+            .radio-group.answered-correct label:has(input:checked) { display: inline-block; background: #eafaf0; color: #1e8449; border: 1px solid #27ae60; border-radius: 20px; padding: 2px 10px; font-size: 0.8em; font-weight: bold; width: auto; }
+            .radio-group.answered-correct label:has(input:checked)::before { content: "✔ "; }
+            .radio-group.answered-wrong label:has(input:checked) { display: inline-block; background: #fdecea; color: #c0392b; border: 1px solid #e74c3c; border-radius: 20px; padding: 2px 10px; font-size: 0.8em; font-weight: bold; width: auto; }
+            .radio-group.answered-wrong label:has(input:checked)::before { content: "✘ "; }
+            .radio-group.answered-wrong .correct-answer-note { display: inline-block; color: #1e8449; font-size: 0.75em; font-weight: bold; background: #eafaf0; border: 1px dashed #27ae60; border-radius: 20px; padding: 2px 8px; margin-right: 5px; }
+            .btn-submit, .btn-print { display: none !important; }
+            .result-box { margin-top: 8px; padding: 6px 10px; border: 2px solid #27ae60; border-radius: 8px; background-color: #eafaf0; page-break-inside: avoid; }
+            .grade-text { font-size: 1.2em; direction: ltr; display: inline-block; unicode-bidi: embed; }
+            .feedback { font-size: 0.75em; margin-top: 4px; }
+            .result-box > div:last-child { display: none; }
+            .footer-note { margin-top: 15px; padding-top: 10px; font-size: 0.75em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://i.postimg.cc/cL0dkNg1/trwysyh.png" alt="الترويسة" class="header-img">
+        <h2>تقرير إنجاز نشاط إلكتروني - مادة العلوم - الصف السادس الابتدائي - الخصائص الفيزيائية (علاجي 610)</h2>
+        <div class="date-box" id="currentDate"></div>
+
+        <form id="activityForm">
+            <div class="form-group">
+                <label>اسم الطالب الرباعي:</label>
+                <input type="text" id="studentName" required placeholder="اكتب اسمك هنا...">
+            </div>
+            <div class="form-group">
+                <label>الصف:</label>
+                <select id="studentClass" required>
+                    <option value="" disabled selected>اختر صفك...</option>
+                    <option value="سادس ابتدائي 1">سادس ابتدائي 1</option>
+                    <option value="سادس ابتدائي 2">سادس ابتدائي 2</option>
+                    <option value="سادس ابتدائي 3">سادس ابتدائي 3</option>
+                </select>
+            </div>
+
+            <div class="question-card">
+                <div class="item-name">1. صفات يمكن ملاحظتها دون أن تتغير طبيعة المادة تسمى:</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q1" value="تفاعلات كيميائية" required> أ) تفاعلات كيميائية</label>
+                    <label><input type="radio" name="q1" value="خصائص فيزيائية"> ب) خصائص فيزيائية</label>
+                    <label><input type="radio" name="q1" value="طاقة حرارية"> ج) طاقة حرارية</label>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="item-name">2. ما هي وحدة قياس "الوزن"؟</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q2" value="النيوتن" required> أ) النيوتن</label>
+                    <label><input type="radio" name="q2" value="الجرام"> ب) الجرام</label>
+                    <label><input type="radio" name="q2" value="السنتيمتر المكعب"> ج) السنتيمتر المكعب</label>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="item-name">3. عند السفر من الأرض إلى القمر، ماذا يحدث للكتلة والوزن؟</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q3" value="كلاهما يتغير" required> أ) كلاهما يتغير</label>
+                    <label><input type="radio" name="q3" value="الكتلة ثابتة والوزن يختلف"> ب) الكتلة ثابتة والوزن يختلف</label>
+                    <label><input type="radio" name="q3" value="كلاهما ثابت"> ج) كلاهما ثابت</label>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="item-name">4. الحيز الذي يشغله الجسم، ويقاس بوحدة (سم³) يسمى:</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q4" value="الكتلة" required> أ) الكتلة</label>
+                    <label><input type="radio" name="q4" value="الوزن"> ب) الوزن</label>
+                    <label><input type="radio" name="q4" value="الحجم"> ج) الحجم</label>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="item-name">5. القانون الرياضي الصحيح لحساب "الكثافة" هو:</div>
+                <div class="radio-group">
+                    <label><input type="radio" name="q5" value="الكثافة = الكتلة ÷ الحجم" required> أ) الكثافة = الكتلة ÷ الحجم</label>
+                    <label><input type="radio" name="q5" value="الكثافة = الكتلة × الحجم"> ب) الكثافة = الكتلة × الحجم</label>
+                    <label><input type="radio" name="q5" value="الكثافة = الحجم ÷ الكتلة"> ج) الكثافة = الحجم ÷ الكتلة</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">تسليم النشاط</button>
+        </form>
+
+        <button type="button" class="btn-print" id="printBtn">🖨️ طباعة النشاط</button>
+
+        <div class="result-box" id="resultBox">
+            <div>الدرجة المستحقة:</div>
+            <div class="grade-text" id="gradeDisplay"><span style="direction: ltr; unicode-bidi: embed;">0 من 5</span></div>
+            <div class="feedback" id="feedbackDisplay"></div>
+            <div style="color:#27ae60; font-size:0.9em; margin-top:15px; font-weight:bold;">تم توثيق إجابتك وإرسالها لأستاذ المادة بنجاح ✔️</div>
+        </div>
+        
+        <div class="footer-note">إعداد الأستاذ / صبري محمد حمد</div>
+    </div>
+
+    <script>
+        document.getElementById('currentDate').innerText = "التاريخ: " + new Date().toLocaleDateString('ar-EG');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyhEGtwtkY7PD_T9R53Y3t-viKaQYPBaN4CDL1th64ZnaP8Bgxnky4oVS7hZFRT-AZD/exec';
+        const form = document.getElementById('activityForm');
+
+        const questionsBank = [
+            { id: 'q1', text: 'صفات يمكن ملاحظتها دون أن تتغير طبيعة المادة تسمى:', correct: 'خصائص فيزيائية' },
+            { id: 'q2', text: 'ما هي وحدة قياس "الوزن"؟', correct: 'النيوتن' },
+            { id: 'q3', text: 'عند السفر من الأرض إلى القمر، ماذا يحدث للكتلة والوزن؟', correct: 'الكتلة ثابتة والوزن يختلف' },
+            { id: 'q4', text: 'الحيز الذي يشغله الجسم، ويقاس بوحدة (سم³) يسمى:', correct: 'الحجم' },
+            { id: 'q5', text: 'القانون الرياضي الصحيح لحساب "الكثافة" هو:', correct: 'الكثافة = الكتلة ÷ الحجم' }
+        ];
+
+        function toArabicDigits(value) {
+            const arabicDigits = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+            return value.toString().replace(/[0-9]/g, d => arabicDigits[+d]);
+        }
+
+        const viewportMeta = document.getElementById('viewportMeta');
+        function expandViewportForPrint() { viewportMeta.setAttribute('content', 'width=1000, initial-scale=1'); }
+        function restoreViewportAfterPrint() { viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0'); }
+        window.addEventListener('beforeprint', expandViewportForPrint);
+        window.addEventListener('afterprint', restoreViewportAfterPrint);
+        document.getElementById('printBtn').addEventListener('click', () => { expandViewportForPrint(); setTimeout(() => { window.print(); }, 50); });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            document.getElementById('submitBtn').innerText = 'جاري التوثيق والإرسال...';
+            document.getElementById('submitBtn').disabled = true;
+
+            let score = 0;
+            let feedbackHTML = "<ul>";
+            let questionsReport = [];
+
+            questionsBank.forEach((item, idx) => {
+                const num = idx + 1;
+                const studentAnswer = form[item.id].value;
+                const isCorrect = studentAnswer === item.correct;
+                if (isCorrect) score++;
+
+                feedbackHTML += isCorrect ? `<li class='correct'>س${num}: صحيح.</li>` : `<li class='wrong'>س${num}: خطأ.</li>`;
+                questionsReport.push({ n: num, q: item.text, answer: studentAnswer, correct: item.correct, isCorrect: isCorrect });
+
+                const radioGroup = form.querySelector(`input[name="${item.id}"]:checked`).closest('.radio-group');
+                radioGroup.classList.add(isCorrect ? 'answered-correct' : 'answered-wrong');
+                if (!isCorrect) {
+                    const note = document.createElement('span');
+                    note.className = 'correct-answer-note';
+                    note.textContent = 'الصحيحة: ' + item.correct;
+                    radioGroup.appendChild(note);
+                }
+            });
+            feedbackHTML += "</ul>";
+
+            let scoreDisplayString = `<span style="direction: ltr; unicode-bidi: embed; display: inline-block;">${toArabicDigits(score)} من ${toArabicDigits(questionsBank.length)}</span>`;
+
+            let payload = {
+                activityName: "علاجي 610",
+                reportTitle: document.querySelector('h2').innerText,
+                studentName: document.getElementById('studentName').value,
+                studentClass: document.getElementById('studentClass').value,
+                score: score + " من " + questionsBank.length,
+                details: JSON.stringify(questionsReport)
+            };
+
+            fetch(scriptURL, { method: 'POST', body: JSON.stringify(payload) })
+            .then(response => {
+                document.getElementById('resultBox').style.display = 'block';
+                document.getElementById('gradeDisplay').innerHTML = scoreDisplayString;
+                document.getElementById('feedbackDisplay').innerHTML = feedbackHTML;
+                document.getElementById('submitBtn').style.display = 'none';
+                document.getElementById('printBtn').style.display = 'block';
+                let inputs = form.querySelectorAll('input, select');
+                inputs.forEach(input => input.disabled = true);
+            })
+            .catch(error => {
+                alert('حدث خطأ بالاتصال! تأكد من شبكة الإنترنت.');
+                document.getElementById('submitBtn').innerText = 'تسليم النشاط';
+                document.getElementById('submitBtn').disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
