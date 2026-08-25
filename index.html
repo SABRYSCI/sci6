@@ -3,72 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة أنشطة العلوم | الصف السادس</title>
+    <title>فهرس الأنشطة التفاعلية - علوم الصف السادس</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap');
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Tajawal', sans-serif; background-color: #f4f7f6; color: #333; }
         
-        .container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        .header-img { width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        
-        .header-title { text-align: center; color: #1f497d; margin-bottom: 5px; font-size: 1.6em; font-weight: 900; }
-        .teacher-name { text-align: center; color: #7f8c8d; margin-bottom: 30px; font-size: 1.1em; font-weight: bold; }
-        
-        .lesson-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-right: 5px solid #1f497d; }
-        .lesson-card:hover { transform: translateY(-5px); }
-        
-        .lesson-title { font-size: 1.3em; color: #2c3e50; margin-bottom: 15px; font-weight: 700; border-bottom: 2px dashed #eee; padding-bottom: 10px;}
-        
-        .buttons-container { display: flex; gap: 15px; flex-wrap: wrap; }
-        
-        .btn { flex: 1; min-width: 150px; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: bold; color: white; transition: 0.3s; }
-        
-        /* ألوان الأزرار */
-        .btn-blue { background-color: #1976d2; border: 1px solid #1565c0; }
-        .btn-blue:hover { background-color: #115293; box-shadow: 0 4px 8px rgba(25, 118, 210, 0.3); }
-        
-        .btn-green { background-color: #27ae60; border: 1px solid #1e8449; }
-        .btn-green:hover { background-color: #196f3d; box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3); }
-        
-        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #95a5a6; font-size: 0.9em; }
+        body { 
+            font-family: 'Tajawal', sans-serif; 
+            background-color: #f4f6f9; 
+            color: #333;
+            padding: 20px;
+        }
 
-        @media (max-width: 600px) {
-            .buttons-container { flex-direction: column; }
+        .header {
+            text-align: center;
+            background-color: #154360;
+            color: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header p { font-size: 1.1em; color: #a9cce3; }
+        .header .school-name { font-size: 1.2em; font-weight: bold; color: #f1c40f; margin-top: 10px; display: inline-block;}
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid #2980b9;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            height: 50px; /* لتوحيد ارتفاع العناوين */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.95em;
+            transition: 0.3s;
+        }
+
+        .btn-remedial { background-color: #2980b9; }
+        .btn-remedial:hover { background-color: #1f618d; }
+
+        .btn-enrichment { background-color: #27ae60; }
+        .btn-enrichment:hover { background-color: #1e8449; }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 1em;
+            color: #7f8c8d;
+            font-weight: bold;
+            border-top: 2px solid #ddd;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- الترويسة العلوية -->
-        <img src="https://i.postimg.cc/cL0dkNg1/trwysyh.png" alt="ترويسة العلوم" class="header-img">
-        
-        <h1 class="header-title">منصة الأنشطة التفاعلية لمادة العلوم</h1>
-        <p class="teacher-name">الصف السادس الابتدائي | إعداد الأستاذ: صبري محمد حمد</p>
+    <div class="header">
+        <h1>فهرس الأنشطة الإلكترونية التفاعلية</h1>
+        <p>مادة العلوم - الصف السادس الابتدائي</p>
+        <span class="school-name">مدرسة البلاد القديم الابتدائية الإعدادية للبنين</span>
+    </div>
 
-        <!-- الدرس الأول -->
-        <div class="lesson-card">
-            <h2 class="lesson-title">الدرس الأول: النظرية الخلوية</h2>
-            <div class="buttons-container">
-                <a href="L1R.html" class="btn btn-blue">نشاط علاجي 61 ✏️</a>
-                <a href="L1E.html" class="btn btn-green">نشاط إثرائي 61 🚀</a>
+    <div class="grid-container">
+        <!-- يمكنك تعديل عناوين الأنشطة من 1 إلى 5 حسب مسمياتها الفعلية في ملزمتك -->
+        <div class="card">
+            <h3>1. النشاط الأول</h3>
+            <div class="btn-group">
+                <a href="L1R.html" class="btn btn-remedial">🔵 علاجي 61</a>
+                <a href="L1E.html" class="btn btn-enrichment">🟢 إثرائي 61</a>
             </div>
         </div>
 
-        <!-- الدرس الثاني -->
-        <div class="lesson-card">
-            <h2 class="lesson-title">الدرس الثاني: الخلايا والمخلوقات الحية</h2>
-            <div class="buttons-container">
-                <a href="L2R.html" class="btn btn-blue">نشاط علاجي 62 ✏️</a>
-                <a href="L2E.html" class="btn btn-green">نشاط إثرائي 62 🚀</a>
+        <div class="card">
+            <h3>2. النشاط الثاني</h3>
+            <div class="btn-group">
+                <a href="L2R.html" class="btn btn-remedial">🔵 علاجي 62</a>
+                <a href="L2E.html" class="btn btn-enrichment">🟢 إثرائي 62</a>
             </div>
         </div>
 
-        <div class="footer">
-            جميع الحقوق محفوظة &copy; 2026 | أ. صبري محمد حمد
+        <div class="card">
+            <h3>3. النشاط الثالث</h3>
+            <div class="btn-group">
+                <a href="L3R.html" class="btn btn-remedial">🔵 علاجي 63</a>
+                <a href="L3E.html" class="btn btn-enrichment">🟢 إثرائي 63</a>
+            </div>
         </div>
+
+        <div class="card">
+            <h3>4. النشاط الرابع</h3>
+            <div class="btn-group">
+                <a href="L4R.html" class="btn btn-remedial">🔵 علاجي 64</a>
+                <a href="L4E.html" class="btn btn-enrichment">🟢 إثرائي 64</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>5. النشاط الخامس</h3>
+            <div class="btn-group">
+                <a href="L5R.html" class="btn btn-remedial">🔵 علاجي 65</a>
+                <a href="L5E.html" class="btn btn-enrichment">🟢 إثرائي 65</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>6. انقسام الخلية</h3>
+            <div class="btn-group">
+                <a href="L6R.html" class="btn btn-remedial">🔵 علاجي 66</a>
+                <a href="L6E.html" class="btn btn-enrichment">🟢 إثرائي 66</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>7. دورة الحياة</h3>
+            <div class="btn-group">
+                <a href="L7R.html" class="btn btn-remedial">🔵 علاجي 67</a>
+                <a href="L7E.html" class="btn btn-enrichment">🟢 إثرائي 67</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>8. الوراثة والصفات</h3>
+            <div class="btn-group">
+                <a href="L8R.html" class="btn btn-remedial">🔵 علاجي 68</a>
+                <a href="L8E.html" class="btn btn-enrichment">🟢 إثرائي 68</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>9. الوراثة ومخطط السلالة</h3>
+            <div class="btn-group">
+                <a href="L9R.html" class="btn btn-remedial">🔵 علاجي 69</a>
+                <a href="L9E.html" class="btn btn-enrichment">🟢 إثرائي 69</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>10. الخصائص الفيزيائية للمادة</h3>
+            <div class="btn-group">
+                <a href="L10R.html" class="btn btn-remedial">🔵 علاجي 610</a>
+                <a href="L10E.html" class="btn btn-enrichment">🟢 إثرائي 610</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>11. الطفو والموصلية</h3>
+            <div class="btn-group">
+                <a href="L11R.html" class="btn btn-remedial">🔵 علاجي 611</a>
+                <a href="L11E.html" class="btn btn-enrichment">🟢 إثرائي 611</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>12. الماء والمخاليط</h3>
+            <div class="btn-group">
+                <a href="L12R.html" class="btn btn-remedial">🔵 علاجي 612</a>
+                <a href="L12E.html" class="btn btn-enrichment">🟢 إثرائي 612</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>13. الذوبانية وفصل المخاليط</h3>
+            <div class="btn-group">
+                <a href="L13R.html" class="btn btn-remedial">🔵 علاجي 613</a>
+                <a href="L13E.html" class="btn btn-enrichment">🟢 إثرائي 613</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>14. التغيرات الكيميائية</h3>
+            <div class="btn-group">
+                <a href="L14R.html" class="btn btn-remedial">🔵 علاجي 614</a>
+                <a href="L14E.html" class="btn btn-enrichment">🟢 إثرائي 614</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>15. التفاعلات الكيميائية</h3>
+            <div class="btn-group">
+                <a href="L15R.html" class="btn btn-remedial">🔵 علاجي 615</a>
+                <a href="L15E.html" class="btn btn-enrichment">🟢 إثرائي 615</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>16. الخصائص الكيميائية والجدول الدوري</h3>
+            <div class="btn-group">
+                <a href="L16R.html" class="btn btn-remedial">🔵 علاجي 616</a>
+                <a href="L16E.html" class="btn btn-enrichment">🟢 إثرائي 616</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>17. الأحماض والقواعد والأملاح</h3>
+            <div class="btn-group">
+                <a href="L17R.html" class="btn btn-remedial">🔵 علاجي 617</a>
+                <a href="L17E.html" class="btn btn-enrichment">🟢 إثرائي 617</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>18. الهواء والماء</h3>
+            <div class="btn-group">
+                <a href="L18R.html" class="btn btn-remedial">🔵 علاجي 618</a>
+                <a href="L18E.html" class="btn btn-enrichment">🟢 إثرائي 618</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>19. مصادر التلوث والأوزون</h3>
+            <div class="btn-group">
+                <a href="L19R.html" class="btn btn-remedial">🔵 علاجي 619</a>
+                <a href="L19E.html" class="btn btn-enrichment">🟢 إثرائي 619</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>20. حماية موارد الأرض</h3>
+            <div class="btn-group">
+                <a href="L20R.html" class="btn btn-remedial">🔵 علاجي 620</a>
+                <a href="L20E.html" class="btn btn-enrichment">🟢 إثرائي 620</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>21. تقويم حماية الموارد</h3>
+            <div class="btn-group">
+                <a href="L21R.html" class="btn btn-remedial">🔵 علاجي 621</a>
+                <a href="L21E.html" class="btn btn-enrichment">🟢 إثرائي 621</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>22. مصادر الطاقة والمحافظة عليها</h3>
+            <div class="btn-group">
+                <a href="L22R.html" class="btn btn-remedial">🔵 علاجي 622</a>
+                <a href="L22E.html" class="btn btn-enrichment">🟢 إثرائي 622</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        إعداد الأستاذ / صبري محمد حمد <br>
+        <span style="font-size: 0.85em; color: #95a5a6; display: block; margin-top: 8px;">بفضل الله انتهت المذكرة والحمد لله رب العالمين</span>
     </div>
 
 </body>
